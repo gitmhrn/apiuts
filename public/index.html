@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skincare & Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Register Section -->
+        <div id="register-section">
+            <h2>Register</h2>
+            <input type="text" id="username" placeholder="Username" />
+            <input type="email" id="email" placeholder="Email" />
+            <input type="password" id="password" placeholder="Password" />
+            <button onclick="register()">Register</button>
+        </div>
+
+        <!-- Login Section -->
+        <div id="login-section" style="display: none;">
+            <h2>Login</h2>
+            <input type="email" id="login-username" placeholder="Email" /> <!-- Corrected id here -->
+            <input type="password" id="login-password" placeholder="Password" />
+            <button onclick="login()">Login</button>
+        </div>
+
+        <!-- Weather and Skincare Recommendations Section -->
+        <div id="weather-skincare-section" style="display: none;">
+            <h2>Weather & Skincare Recommendations</h2>
+            <p id="user-info"></p> 
+
+            <input type="text" id="city" placeholder="Enter city for weather" />
+            <button onclick="getWeatherData()">Get Weather</button>
+            <p id="weather-result"></p>
+
+            <button onclick="getSkincareRecommendations()">Get Skincare Recommendations</button>
+            <ul id="skincare-result"></ul>
+
+            <p>Your API Key: <span id="api-key-value"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
